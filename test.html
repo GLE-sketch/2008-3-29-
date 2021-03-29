@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin: 5px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 350px;background: #fff;">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div style="background: blue;text-align: center;line-height: 100px;color: #fff;" onclick="fun1()">抽奖</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+<script>
+    var _div = document.querySelectorAll("div")
+    function fun1() {
+        setInterval(function () {
+            var arndom = Math.ceil(Math.random() * 10)
+            _div.forEach(function (v, k) {
+                if (k == arndom) {
+                    //   alert(1)
+                }
+            })
+
+        }, 1000)
+    }
+
+    // 对象的引用
+    //  var obj1 = {'name':'张三'}
+    //  var obj2 = obj1
+    //  obj2.name = "李四"
+    //  console.log(obj1)
+
+    
+
+</script>
+
+</html>
